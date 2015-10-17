@@ -4,7 +4,7 @@ class ChannelsController < ApplicationController
   # GET /channels
   # GET /channels.json
   def index
-    @channels = Channel.all
+      @channels = current_user.channels
   end
 
   # GET /channels/1
@@ -58,6 +58,22 @@ class ChannelsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to channels_url, notice: 'Channel was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def join
+    code = params[:code]
+    @channel = Channel.find(params[:id])
+    respond_to do |format|
+        if code == @channel.code
+            current_user.channels << @channel
+            current_user.save
+            format.html { redirect_to @channel, notice: 'Channel was successfully updated.' }
+            format.json { render :show, status: :ok, location: @channel }
+        else
+            format.html { render :edit }
+            format.json { render json: @channel.errors, status: :unprocessable_entity }
+        end
     end
   end
 
