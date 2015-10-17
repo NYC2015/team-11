@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :votes
+  has_many :comments
   has_many :project_users
   has_many :projects, through: :project_users
   has_and_belongs_to_many :channels
