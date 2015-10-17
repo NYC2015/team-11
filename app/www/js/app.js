@@ -26,29 +26,57 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   $stateProvider
 
     .state('app', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
-  })
+      url: '/app',
+      abstract: true,
+      templateUrl: 'templates/menu.html',
+      controller: 'AppCtrl'
+    })
 
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
+    .state('app.profile', {
+      url: '/profile',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/profile.html'
         }
       }
     })
+
+    .state('app.explore', {
+      url: '/explore',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/explore.html'
+        }
+      }
+    })
+
+    .state('app.projects', {
+      url: '/projects',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/projects.html'
+        }
+      }
+    })
+
+    .state('app.channels', {
+      url: '/channels',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/channels.html'
+        }
+      }
+    })
+
+    .state('app.home', {
+      url: '/home',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/home.html'
+        }
+      }
+    })
+
     .state('app.playlists', {
       url: '/playlists',
       views: {
