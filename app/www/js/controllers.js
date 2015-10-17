@@ -80,13 +80,13 @@ $scope.login = function() {
 
 .controller('ChannelsCtrl', function($scope) {
   $scope.curr_channels = [
-    { title: 'JPMC Code for Good', id: 1, img: '/img/Code4Good.jpg' }
+    { title: 'JPMC Code for Good', id: 1, img: './img/Code4Good.jpg' }
   ];
 
     $scope.past_channels = [
-    { title: 'HackGT at Georgia Tech', id: 2, img: '/img/HackGT.jpg' },
-    { title: "Qualcomm's EmpowHERment Summit", id: 3, img: '/img/qualcomm.jpg' },
-    { title: 'Grace Hopper Celebration 2015', id: 4, img: '/img/GraceHopper.jpg' }
+    { title: 'HackGT at Georgia Tech', id: 2, img: './img/HackGT.jpg' },
+    { title: "Qualcomm's EmpowHERment Summit", id: 3, img: './img/qualcomm.jpg' },
+    { title: 'Grace Hopper Celebration 2015', id: 4, img: './img/GraceHopper.jpg' }
   ];
 })
 
