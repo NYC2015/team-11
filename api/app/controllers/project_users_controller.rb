@@ -4,7 +4,7 @@ class ProjectUsersController < ApplicationController
   # GET /project_users
   # GET /project_users.json
   def index
-    @project_users = ProjectUser.all
+      @project_users = current_user.project_users
   end
 
   # GET /project_users/1
@@ -25,6 +25,7 @@ class ProjectUsersController < ApplicationController
   # POST /project_users.json
   def create
     @project_user = ProjectUser.new(project_user_params)
+    @project_user.owner = false
 
     respond_to do |format|
       if @project_user.save

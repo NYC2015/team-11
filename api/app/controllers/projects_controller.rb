@@ -28,6 +28,8 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
+        project_user = current_user.project_users.build(:owner => true, project_id: => @project.id)
+        project_user.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
@@ -61,10 +63,17 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def tag
+      @project = current_user.projects.find(params[:id])
+      tag = Tag.find(params[:tag_id])
+      @project.tags << tag
+      @project.save
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = Project.find(params[:id])
+        @project = current_user.projects.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

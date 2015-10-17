@@ -61,6 +61,22 @@ class ChannelsController < ApplicationController
     end
   end
 
+  def join
+    code = params[:code]
+    @channel = Channel.find(params[:id])
+    respond_to do |format|
+        if code == @channel.code
+            current_user.channels << @channel
+            current_user.save
+            format.html { redirect_to @channel, notice: 'Channel was successfully updated.' }
+            format.json { render :show, status: :ok, location: @channel }
+        else
+            format.html { render :edit }
+            format.json { render json: @channel.errors, status: :unprocessable_entity }
+        end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_channel
