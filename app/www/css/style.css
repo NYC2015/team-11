@@ -8,3 +8,7 @@ h1 {
 	font-size: 2em;
 	padding: .5em;
 }
+
+.item-divider {
+	padding: 1em;
+}
