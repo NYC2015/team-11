@@ -71,28 +71,23 @@ $scope.login = function() {
 
 .controller('ChannelsCtrl', function($scope) {
   $scope.curr_channels = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 }
+    { title: 'JPMC Code for Good', id: 1 },
   ];
 
     $scope.past_channels = [
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: 'PearlHacks at UNC-Chapel Hill', id: 2 },
+    { title: "Qualcomm's EmpowHERment Summit", id: 3 },
+    { title: 'Grace Hopper Celebration 2015', id: 4 }
   ];
 })
 
 .controller('ProjectsCtrl', function($scope) {
   $scope.curr_projects = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 }
+    { title: 'Job Club', channel: 'JPMC Code for Good', id: 1 },
   ];
 
     $scope.past_projects = [
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: 'Pomelo', channel: "Qualcomm's EmpowHERment Summit", id: 4 },
+    { title: 'Accio', channel: 'PearlHacks at UNC-Chapel Hill', id: 5 },
   ];
 })
