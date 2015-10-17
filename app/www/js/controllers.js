@@ -85,7 +85,7 @@ $scope.login = function() {
 
     $scope.past_channels = [
     { title: 'HackGT at Georgia Tech', id: 2, img: '/img/HackGT.jpg' },
-    { title: "Qualcomm's EmpowHERment Summit", id: 3, img: '' },
+    { title: "Qualcomm's EmpowHERment Summit", id: 3, img: '/img/qualcomm.jpg' },
     { title: 'Grace Hopper Celebration 2015', id: 4, img: '/img/GraceHopper.jpg' }
   ];
 })
