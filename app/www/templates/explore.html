@@ -46,41 +46,15 @@
 
 		<div class="list">
 
-<<<<<<< HEAD
-	    <a class="item item-thumbnail-left" href="#">
-	      <img src="/img/flowers.jpg">
-	      <h2>Bouquet Business</h2>
-	      <p>Bringing Flowers and Happiness to Homes</p>
-	    </a>
+		<div class="col">
+			<a class="item item-icon-left" href="#" ng-repeat="project in projects">
+	    		<i class="icon ion-log-in"></i>
+		      	<h2>{{project.title}} </h2>
+		      	<p>{{project.channel}}</p>
+		    </a>
+  		</div>
 
-	    <a class="item item-thumbnail-left" href="#">
-	      <img src="/img/books.jpg">
-	      <h2>BookFace</h2>
-	      <p>A social media platform that connects people through books</p>
-	    </a>
-
-	    <a class="item item-thumbnail-left" href="#">
-	      <img src="/img/lemonade.jpg">
-	      <h2>Lemonade Stand</h2>
-	      <p>Quench your thirst!</p>
-	    </a>
-
-	    <a class="item item-thumbnail-left" href="#">
-	      <img src="/img/giftbasket.jpg">
-	      <h2>Gift Baskets</h2>
-	      <p>Send some love!</p>
-	    </a>
-=======
-			<div class="col">
-				<a class="item item-icon-left" href="#" ng-repeat="project in projects">
-		    		<i class="icon ion-log-in"></i>
-			      	<h2>{{project.title}} </h2>
-			      	<p>{{project.channel}}</p>
-			    </a>
-	  		</div>
->>>>>>> e7c7c1c64599e4ef1d2c4893db622e46e273cc6f
-
-		</div>
+	</div>
 
 
   </ion-content>
