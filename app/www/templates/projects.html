@@ -1,5 +1,36 @@
 <ion-view view-title="Projects">
   <ion-content>
     <h1>Projects</h1>
+    <div class="item item-divider">Current Projects</div>
+    <div class="list" ng-repeat="project in projects">
+      <a href="#" class="item item-icon-right">
+	    <i class="icon ion-arrow"></i>
+	    {{project.title}}
+	  </a>
+    </div>
+    <!-- <div class="list card" ng-repeat="project in projects">
+      <div class="item item-divider">{{project.name}}</div>
+
+	  <a href="#" class="item item-icon-left">
+	    <i class="icon ion-home"></i>
+	    Enter home address
+	  </a>
+
+	  <a href="#" class="item item-icon-left">
+	    <i class="icon ion-ios-telephone"></i>
+	    Enter phone number
+	  </a>
+
+	  <a href="#" class="item item-icon-left">
+	    <i class="icon ion-wifi"></i>
+	    Enter wireless password
+	  </a>
+
+	  <a href="#" class="item item-icon-left">
+	    <i class="icon ion-card"></i>
+	    Enter card information
+	  </a>
+
+</div> -->
   </ion-content>
 </ion-view>

@@ -1,4 +1,24 @@
-<ion-modal-view>
+<ion-view view-title="Login">
+  <ion-content>
+    <h1>Login</h1>
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Email</span>
+        <input type="email" placeholder="Email" ng-model="data.email">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Password</span>
+        <input type="password" placeholder="Password" ng-model="data.password">
+      </label>
+    </div>
+    
+    <div class="padding">
+      <button class="button button-block button-calm" ng-click="login()">Login</button>
+    </div>
+  </ion-content>
+</ion-view>
+
+<!-- <ion-modal-view>
   <ion-header-bar>
     <h1 class="title">Login</h1>
     <div class="buttons">
@@ -22,4 +42,4 @@
       </div>
     </form>
   </ion-content>
-</ion-modal-view>
+</ion-modal-view> -->

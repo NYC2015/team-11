@@ -9,7 +9,7 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  // Form data for the login modal
+  /*// Form data for the login modal
   $scope.loginData = {};
 
   // Create the login modal that we will use later
@@ -38,7 +38,7 @@ angular.module('starter.controllers', [])
     $timeout(function() {
       $scope.closeLogin();
     }, 1000);
-  };
+  };*/
 })
 
 /*.controller('DashCtrl', function($scope, BlogEntry) {
@@ -46,6 +46,39 @@ angular.module('starter.controllers', [])
     $scope.blog_entries = response;
   });
 })*/
+
+.controller('LoginCtrl', function($scope, $location, UserSession, $ionicPopup, $rootScope) {
+$scope.data = {};
+
+$scope.login = function() {
+  var user_session = new UserSession({ user: $scope.data });
+  user_session.$save(
+    function(data){
+      window.localStorage['userId'] = data.id;
+      window.localStorage['userName'] = data.name;
+      $location.path('app/home');
+    },
+    function(err){
+      var error = err["data"]["error"] || err.data.join('. ')
+      var confirmPopup = $ionicPopup.alert({
+        title: 'An error occured',
+        template: error
+      });
+    }
+  );
+}
+})
+
+.controller('ProjectsCtrl', function($scope) {
+  $scope.projects = [
+    { title: 'Reggae', id: 1 },
+    { title: 'Chill', id: 2 },
+    { title: 'Dubstep', id: 3 },
+    { title: 'Indie', id: 4 },
+    { title: 'Rap', id: 5 },
+    { title: 'Cowbell', id: 6 }
+  ];
+})
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
