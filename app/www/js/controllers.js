@@ -57,6 +57,7 @@ $scope.login = function() {
       window.localStorage['userId'] = data.id;
       window.localStorage['userName'] = data.name;
       $location.path('app/home');
+      $route.reload();
     },
     function(err){
       var error = err["data"]["error"] || err.data.join('. ')
