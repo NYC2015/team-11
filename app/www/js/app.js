@@ -83,6 +83,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     })
 
+    .state('app.levels', {
+      url: '/levels',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/levels.html'
+        }
+      }
+    })
+
+    .state('app.requirements', {
+      url: '/requirements',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/requirements.html'
+        }
+      }
+    })
+
     .state('app.home', {
       url: '/home',
       views: {
