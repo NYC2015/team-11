@@ -69,27 +69,30 @@ $scope.login = function() {
 }
 })
 
+.controller('ChannelsCtrl', function($scope) {
+  $scope.curr_channels = [
+    { title: 'Reggae', id: 1 },
+    { title: 'Chill', id: 2 },
+    { title: 'Dubstep', id: 3 }
+  ];
+
+    $scope.past_channels = [
+    { title: 'Indie', id: 4 },
+    { title: 'Rap', id: 5 },
+    { title: 'Cowbell', id: 6 }
+  ];
+})
+
 .controller('ProjectsCtrl', function($scope) {
-  $scope.projects = [
+  $scope.curr_projects = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
+    { title: 'Dubstep', id: 3 }
+  ];
+
+    $scope.past_projects = [
     { title: 'Indie', id: 4 },
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 }
   ];
 })
-
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
