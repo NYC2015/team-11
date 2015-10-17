@@ -41,6 +41,12 @@ angular.module('starter.controllers', [])
   };
 })
 
+/*.controller('DashCtrl', function($scope, BlogEntry) {
+  BlogEntry.query().$promise.then(function(response){
+    $scope.blog_entries = response;
+  });
+})*/
+
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
