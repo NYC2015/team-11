@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   post 'channel/:id/join' => 'channels#join'
   post 'project/:id/tag/:tag_id' => 'projects#tag'
+
+  root 'channels#index'
 end
