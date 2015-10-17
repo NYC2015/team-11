@@ -1,16 +1,28 @@
 <ion-view view-title="Projects">
   <ion-content>
-    <div class="item item-divider">Current Projects</div>
-    <a href="#" class="item item-icon-right" ng-repeat="project in curr_projects">
-	   <i class="icon ion-arrow"></i>
-	   {{project.title}}
-	</a>
+    <div class="item item-divider">In Progress</div>
 
-    <div class="item item-divider">Past Projects</div>
-  	<a href="#" class="item item-icon-right" ng-repeat="project in past_projects">
-    	<i class="icon ion-arrow"></i>
-    	{{project.title}}
-  	</a>
+		<div class="list">
+
+	    <a class="item item-icon-left" href="#" ng-repeat="project in curr_projects">
+    		<i class="icon ion-log-in"></i>
+	      <h2>{{project.title}} </h2>
+	      <p>{{project.channel}}</p>
+	    </a>
+
+		</div>
+
+    <div class="item item-divider">Past</div>
+
+    <div class="list">
+
+	    <a class="item item-icon-left" href="#" ng-repeat="project in past_projects">
+    		<i class="icon ion-log-in"></i>
+	      <h2>{{project.title}} </h2>
+	      <p>{{project.channel}}</p>
+	    </a>
+
+		</div>
 
     <!-- <div class="list card" ng-repeat="project in projects">
       <div class="item item-divider">{{project.name}}</div>

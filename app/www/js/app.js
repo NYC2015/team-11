@@ -57,7 +57,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       url: '/explore',
       views: {
         'menuContent': {
-          templateUrl: 'templates/explore.html'
+          templateUrl: 'templates/explore.html',
+          controller: 'ExploreCtrl'
         }
       }
     })
