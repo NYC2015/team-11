@@ -69,6 +69,15 @@ $scope.login = function() {
 }
 })
 
+
+.controller('ExploreCtrl', function($scope) {
+  $scope.projects = [
+    { title: 'Job Club', channel: 'JPMC Code for Good', id: 1, tags: ['Design', 'Tech', 'Development'] },
+    { title: 'Pomelo', channel: "Qualcomm's EmpowHERment Summit", id: 4, tags: ['Design', 'Tech', 'Development']  },
+    { title: 'Accio', channel: 'PearlHacks at UNC-Chapel Hill', id: 5, tags: ['Design', 'Tech', 'Development'] },
+  ];
+})
+
 .controller('ChannelsCtrl', function($scope) {
   $scope.curr_channels = [
     { title: 'JPMC Code for Good', id: 1 },

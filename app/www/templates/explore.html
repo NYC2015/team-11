@@ -11,7 +11,7 @@
 
     <h1 class="center">Filter by tags</h1>
 
-    <div class="row">
+   	<div class="row">
 		  <div class="col">
 		  	<button class="button button-clear button-dark">
 	  			<i class="ion-ios-pricetag"></i> &nbsp; Marketing
@@ -28,6 +28,8 @@
   			</button>
   		</div>
 		</div>
+
+
     <div class="row">
 		  <div class="col">
 		  	<button class="button button-clear button-dark">
@@ -44,29 +46,13 @@
 
 		<div class="list">
 
-	    <a class="item item-thumbnail-left" href="#">
-	      <img src="https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png">
-	      <h2>Pretty Hate Machine</h2>
-	      <p>Nine Inch Nails</p>
-	    </a>
-
-	    <a class="item item-thumbnail-left" href="#">
-	      <img src="https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png">
-	      <h2>Pretty Hate Machine</h2>
-	      <p>Nine Inch Nails</p>
-	    </a>
-
-	    <a class="item item-thumbnail-left" href="#">
-	      <img src="https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png">
-	      <h2>Pretty Hate Machine</h2>
-	      <p>Nine Inch Nails</p>
-	    </a>
-
-	    <a class="item item-thumbnail-left" href="#">
-	      <img src="https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png">
-	      <h2>Pretty Hate Machine</h2>
-	      <p>Nine Inch Nails</p>
-	    </a>
+			<div class="col">
+				<a class="item item-icon-left" href="#" ng-repeat="project in projects">
+		    		<i class="icon ion-log-in"></i>
+			      	<h2>{{project.title}} </h2>
+			      	<p>{{project.channel}}</p>
+			    </a>
+	  		</div>
 
 		</div>
 
