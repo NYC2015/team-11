@@ -57,7 +57,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       url: '/explore',
       views: {
         'menuContent': {
-          templateUrl: 'templates/explore.html'
+          templateUrl: 'templates/explore.html',
+          controller: 'ExploreCtrl'
         }
       }
     })
@@ -78,6 +79,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         'menuContent': {
           templateUrl: 'templates/channels.html',
           controller: 'ChannelsCtrl'
+        }
+      }
+    })
+
+    .state('app.levels', {
+      url: '/levels',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/levels.html'
+        }
+      }
+    })
+
+    .state('app.requirements', {
+      url: '/requirements',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/requirements.html'
         }
       }
     })

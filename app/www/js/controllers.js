@@ -70,15 +70,24 @@ $scope.login = function() {
 }
 })
 
+
+.controller('ExploreCtrl', function($scope) {
+  $scope.projects = [
+    { title: 'Job Club', channel: 'JPMC Code for Good', id: 1, tags: ['Design', 'Tech', 'Development'] },
+    { title: 'Pomelo', channel: "Qualcomm's EmpowHERment Summit", id: 4, tags: ['Design', 'Tech', 'Development']  },
+    { title: 'Accio', channel: 'PearlHacks at UNC-Chapel Hill', id: 5, tags: ['Design', 'Tech', 'Development'] },
+  ];
+})
+
 .controller('ChannelsCtrl', function($scope) {
   $scope.curr_channels = [
-    { title: 'JPMC Code for Good', id: 1 },
+    { title: 'JPMC Code for Good', id: 1, img: './img/Code4Good.jpg' }
   ];
 
     $scope.past_channels = [
-    { title: 'PearlHacks at UNC-Chapel Hill', id: 2 },
-    { title: "Qualcomm's EmpowHERment Summit", id: 3 },
-    { title: 'Grace Hopper Celebration 2015', id: 4 }
+    { title: 'HackGT at Georgia Tech', id: 2, img: './img/HackGT.jpg' },
+    { title: "Qualcomm's EmpowHERment Summit", id: 3, img: './img/qualcomm.jpg' },
+    { title: 'Grace Hopper Celebration 2015', id: 4, img: './img/GraceHopper.jpg' }
   ];
 })
 
