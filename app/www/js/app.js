@@ -40,8 +40,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
     .state('app.login', {
       url: '/login',
-      templateUrl: 'templates/login.html',
-      controller: 'LoginCtrl'
+      views: {
+        'menuContent': {
+        templateUrl: 'templates/login.html'
+        }
+      }
     })
 
     .state('app.profile', {
@@ -49,66 +52,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       views: {
         'menuContent': {
           templateUrl: 'templates/profile.html'
+          //controller: 'ProfileCtrl'
         }
       }
     })
-
-    .state('app.explore', {
-      url: '/explore',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/explore.html',
-          controller: 'ExploreCtrl'
-        }
-      }
-    })
-
-    .state('app.projects', {
-      url: '/projects',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/projects.html',
-          controller: 'ProjectsCtrl'
-        }
-      }
-    })
-
-    .state('app.channels', {
-      url: '/channels',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/channels.html',
-          controller: 'ChannelsCtrl'
-        }
-      }
-    })
-
-    .state('app.levels', {
-      url: '/levels',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/levels.html'
-        }
-      }
-    })
-
-    .state('app.requirements', {
-      url: '/requirements',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/requirements.html'
-        }
-      }
-    })
-
-    .state('app.home', {
-      url: '/home',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/home.html'
-        }
-      }
-    });
     
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/login');

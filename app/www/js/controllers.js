@@ -47,57 +47,11 @@ angular.module('starter.controllers', [])
   });
 })*/
 
-.controller('LoginCtrl', function($scope, $location, UserSession, $ionicPopup, $rootScope) {
-$scope.data = {};
+.controller('ProfileCtrl', function($scope, $location, UserSession, $ionicPopup, $rootScope) {
+  $scope.settingsList = [
+    { text: "Class1", checked: true },
+    { text: "Class2", checked: false },
+    { text: "Class3", checked: false }
+  ];  
+});
 
-$scope.login = function() {
-  var user_session = new UserSession({ user: $scope.data });
-  user_session.$save(
-    function(data){
-      window.localStorage['userId'] = data.id;
-      window.localStorage['userName'] = data.name;
-      $location.path('app/home');
-      $route.reload();
-    },
-    function(err){
-      var error = err["data"]["error"] || err.data.join('. ')
-      var confirmPopup = $ionicPopup.alert({
-        title: 'An error occured',
-        template: error
-      });
-    }
-  );
-}
-})
-
-
-.controller('ExploreCtrl', function($scope) {
-  $scope.projects = [
-    { title: 'Job Club', channel: 'JPMC Code for Good', id: 1, tags: ['Design', 'Tech', 'Development'] },
-    { title: 'Pomelo', channel: "Qualcomm's EmpowHERment Summit", id: 4, tags: ['Design', 'Tech', 'Development']  },
-    { title: 'Accio', channel: 'PearlHacks at UNC-Chapel Hill', id: 5, tags: ['Design', 'Tech', 'Development'] },
-  ];
-})
-
-.controller('ChannelsCtrl', function($scope) {
-  $scope.curr_channels = [
-    { title: 'JPMC Code for Good', id: 1, img: './img/Code4Good.jpg' }
-  ];
-
-    $scope.past_channels = [
-    { title: 'HackGT at Georgia Tech', id: 2, img: './img/HackGT.jpg' },
-    { title: "Qualcomm's EmpowHERment Summit", id: 3, img: './img/qualcomm.jpg' },
-    { title: 'Grace Hopper Celebration 2015', id: 4, img: './img/GraceHopper.jpg' }
-  ];
-})
-
-.controller('ProjectsCtrl', function($scope) {
-  $scope.curr_projects = [
-    { title: 'Job Club', channel: 'JPMC Code for Good', id: 1 },
-  ];
-
-    $scope.past_projects = [
-    { title: 'Pomelo', channel: "Qualcomm's EmpowHERment Summit", id: 4 },
-    { title: 'Accio', channel: 'PearlHacks at UNC-Chapel Hill', id: 5 },
-  ];
-})

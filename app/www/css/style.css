@@ -12,3 +12,15 @@ h1 {
 .item-divider {
 	padding: 1em;
 }
+
+.circular {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(https://cdn3.iconfinder.com/data/icons/token/128/People-MSN.png) no-repeat;
+	margin: 0 auto;
+	background-position: center;
+	
+}
